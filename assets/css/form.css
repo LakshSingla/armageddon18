@@ -1,0 +1,136 @@
+.cross{
+	position: absolute;
+    top: 20px;
+    color: #000;
+    right: 20px;
+    font-size: .8em;
+    cursor: pointer;
+}
+
+
+.form header, .form p{
+	
+	width: 300px;
+	margin: 0 auto;
+	
+}
+
+.form p{
+	margin-top: 30px;
+	color: #425171;
+	font-size: .8em;
+}
+
+
+.form form{
+	/*position: absolute;*/
+    
+    /* bottom: 30px; */
+    margin-bottom: 30px;
+}
+
+
+.hidden{
+	top: 100%;
+	height: 0;
+}
+
+
+
+.field{
+	position: relative;
+	margin: 20px auto;
+	width: fit-content;
+	text-align: left;
+}
+.field *{
+	height: 30px;
+	display: block;
+	width: fit-content;
+	min-width: 300px;
+	transition: all .3s linear;
+}
+
+.field label{
+	position: relative;
+	top: 30px;
+	pointer-events: none;
+
+}
+
+.select label{
+	top:0;
+}
+
+.field select, .field label, .cross{
+	color: #011027;
+	
+}
+
+.clicked label{
+	top: 5px;
+	font-size: .7em;
+	color: #425171;
+}
+
+.field input, .field input:-webkit-autofill{
+	color: #011027;
+	border: 0;
+	outline:0;
+	background-color: transparent !important;
+	border-bottom: 1px solid #ccc;
+}
+
+#submit{
+	margin-top: 20px;
+	
+	color: #eee;
+	background: #011027;
+	border:0;
+	outline:0;
+	border-radius: 5px;
+	font-size: 16px;
+	/*width: 100%;*/
+	/*float: right;*/
+	padding: 10px 30px;
+	cursor: pointer;
+	transition: all .3s linear;
+	border: 1px solid #222;
+}
+
+#submit:hover, #msg{
+	color: #011027;
+	background: #efefef;	
+	
+}
+
+.msg{
+	/*display: none;*/
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	bottom: 50px;
+	border-radius: 6px;
+	border: 1px solid #777;
+	padding: 10px 30px;
+	margin: 0 auto;
+	transition: all 1s linear;
+}
+.show{
+	opacity: 1;
+}
+
+input:focus{
+	border-bottom: 1px solid #00f;
+}
+
+#msg{
+	/*position: absolute;*/
+	width: 100%;
+	line-height: 30px;
+	top: 0;
+	/*display: none;*/
+	padding: 10px;
+	
+}
+

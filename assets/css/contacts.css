@@ -1,0 +1,62 @@
+.canvas[data='contact']{
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-align-items: center;
+	        align-items: center;
+	height: fit-content;
+	overflow: auto;
+}
+
+.contact-card{
+	margin: 20px;
+	color: #000;
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	/*border: 1px solid #000;*/
+	background: #eee;
+	padding: 20px;
+	width: 250px;
+	border-radius: 6px;
+	height: fit-content;
+}
+
+.contact-card .image{
+	width: 200px;
+	min-height: 200px;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.contact-card .image img{
+	width: inherit;
+	height: inherit;
+}
+
+.contact-card .details{
+	margin: 10px;
+}
+
+.contact-card .details *{
+	color: #000;
+}
+
+.contact-card .details .name{
+	font-size: 1.3em;
+}
+
+.contact-card .details .email{
+	font-size: .7em;
+}
+
+.contact-card .details .desig{
+	font-size: .9em;
+}
+
