@@ -1,5 +1,6 @@
-var base_url = "http://bits-apogee.org/2018/armageddon/";
+var base_url = "https://bits-apogee.org/2018/armageddon/";
 window.onload = function(){
+
 	var components;
 	if(window.innerWidth > 768){
 		components = {
@@ -17,6 +18,12 @@ window.onload = function(){
 	}
 	makePage(components);
 	init();
+
+	hideLoader();
+}
+
+function hideLoader(){
+	$(".loader").fadeOut();
 }
 
 function init(){
