@@ -67,7 +67,7 @@ var templates = {
 			<form>\
 				<div class="field">\
 						<label>Name Of Clan</label>\
-						<input name="team_name" type="text" autofocus="false" autocomplete="off" >\
+						<input name="team_name" type="text" autofocus="false" autocomplete="off" placeholderData="">\
 					</div>\
 					<div class="field select clicked">\
 						<label>Game</label>\

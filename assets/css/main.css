@@ -340,7 +340,7 @@ body{
 	}
 
 	#menu{
-		background: rgba(0, 0, 0, .8);
+		background: rgb(1, 16, 39);
 		color: #000;
 		position: absolute;
 		flex-direction: column;

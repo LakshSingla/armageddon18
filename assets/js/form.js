@@ -118,7 +118,7 @@ function updateFocus(){
 		if(el.querySelector("input") && el.querySelector("input").value == ""){
 			$(el).removeClass("clicked");
 			console.log(el)
-			$(el)[0].querySelector("input").setAttribute("placeholder","");
+			// $(el)[0].querySelector("input").setAttribute("placeholder","");
 		}
 	})
 }
@@ -139,26 +139,33 @@ function createGroup(mode, i){
 	var html = "<p>Member "+ (i+1) +"</p>";
 	if(mode=="bits"){
 		
-		html += createField("Email", "email" + i, "");
-		html += createField("Phone", "phone"+ i, "+91");
+		html += createField("Email", "email" + i);
+		html += createField("Phone", "phone"+ i, (type, e)=>{
+			if(type == "label"){
+				// return "<div class='prefix'><p>+91</p>" + e + "</div>";
+				return e + "<label>+91-</label>"
+			}
+			return e;
+		});
 	}else{
-		html += createField("Email", "email"+ i, "");
+		html += createField("Email", "email"+ i);
 	}
 	return html;
 }
 
-function createField(label, name, placeholderData){
-	return '<div class="field">\
-	<label>' + label + '</label>\
-	<input name="' + name + '" type="text" placeholderData="'+ placeholderData+'">\
-	</div>'
+function createField(label, name, wrapper=(t, e)=>e){
+	var str = '<div class="field">'
+	str += wrapper("label", '<label>' + label + '</label>')
+	str += wrapper("input", '<input name="' + name + '" type="text">')
+	str += '</div>'
+	return str
 }
 
 function setInputEventListener(){
 	$('.form input').on("focus", function(e){
 		updateFocus();
-		$(this).parent().addClass("clicked");
-		this.setAttribute("placeholder",this.getAttribute("placeholderData"))
+		$(this).closest('.field').addClass("clicked");
+		// this.setAttribute("placeholder",this.getAttribute("placeholderData"))
 	})
 
 }

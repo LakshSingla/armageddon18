@@ -79,7 +79,7 @@ function getGame(){
 				formData[e.id] = {
 					"name": e.name,
 					"no_of_participants": e.no_of_participants,
-					"desc": e.description
+					"desc": (e.description?e.description:"")
 				}
 				templates["gameList"] += "<li class='list' data='"+ e.id +"'>" + e.name + "</li>"
 			})
