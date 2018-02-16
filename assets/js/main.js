@@ -106,9 +106,9 @@ function createContactCard(name, imgSrc, email, desig){
 }
 
 
-addContact(createContactCard("eee", "./assets/images/unknown.jpg", "sdj@bfs.com", "asdfghjk"));
-addContact(createContactCard("eee", "./assets/images/unknown.jpg", "sdj@bfs.com", "asdfghjk"));
-addContact(createContactCard("eee", "./assets/images/unknown.jpg", "sdj@bfs.com", "asdfghjk"));
+// addContact(createContactCard("eee", "./assets/images/unknown.jpg", "sdj@bfs.com", "asdfghjk"));
+// addContact(createContactCard("eee", "./assets/images/unknown.jpg", "sdj@bfs.com", "asdfghjk"));
+// addContact(createContactCard("eee", "./assets/images/unknown.jpg", "sdj@bfs.com", "asdfghjk"));
 
 function addContact(html){
 	templates["contactInfo"] += html;

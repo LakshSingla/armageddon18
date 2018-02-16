@@ -4,7 +4,10 @@ var templates = {
 	"about": '<header>\
 			<h2>ABOUT</h2>\
 			</header>\
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>'
+			<p class="content">Gear Up the gamer inside you as Armageddon returns to BTIS PILANI\'S Apogee Tech fest.\
+Having a legacy started in 2010 and development over the years, this year\'s iteration\
+features Prizes worth Rs.50000/- up for grabs across the games : CS GO, DOTA 2, and FIFA 18.\
+Assemble your team, and put yourself to the test against the competition. Register now!</p>'
 	,"rules":'<header>RULES</header><a class="rules__" href="https://bits-apogee.org/2018main/events.html">view rules</a>'
 	,"contactInfo": ''
 	,"contact":{
