@@ -12,7 +12,7 @@ var formData = {};
 // formData = {
 // 	1: {
 // 		name: "CS:GO",
-// 		no_of_participants: 2,
+// 		no_of_participants: 10,
 // 		desc: "sad"
 // 	}
 // }

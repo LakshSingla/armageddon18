@@ -68,12 +68,12 @@ function resolve(a){
 
 
 function getGame(){
-	console.log("getGame")
+	// console.log("getGame")
 	$.ajax({
 		url: base_url + 'get_games',
 		method: "GET",
 		success: function(data){
-			console.log(data);	
+			// console.log(data);	
 			templates["gameList"] = "";
 			data.games.forEach(e=>{
 				formData[e.id] = {
@@ -83,7 +83,7 @@ function getGame(){
 				}
 				templates["gameList"] += "<li class='list' data='"+ e.id +"'>" + e.name + "</li>"
 			})
-			console.log(formData)
+			// console.log(formData)
 			updateGameMenu();
 			updateFormOptions();
 

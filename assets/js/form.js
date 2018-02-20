@@ -4,9 +4,9 @@ function initEventListeners(){
 		loadForm(this.getAttribute("data"))
 	})
 	$('.link').click(function(e){
-		console.log("click")
+		// console.log("click")
 		var data = this.getAttribute("data");
-		console.log(data)
+		// console.log(data)
 		if(data == "home"){
 			$("#body").html(templates['about'])
 			hideCanvas();
@@ -19,7 +19,7 @@ function initEventListeners(){
 			}else{
 				loadCanvas(templates[data].valueOf(), data)
 			}
-			console.log(window.innerWidth <= 768);
+			// console.log(window.innerWidth <= 768);
 			if(window.innerWidth <= 768){
 				closeMenu();
 			}
@@ -71,13 +71,14 @@ function loadForm(mode){
 	console.log($("#menu")[0].offsetHeight)
 	if(window.innerWidth > 768){
 		$('.form').css('top', $("#menu")[0].offsetHeight)
-		$('.form')[0].setAttribute("data", mode);
+		
 	}else{
 		$('.form').css('top', 0)
 		$('.form').css('height', window.innerHeight);
 		$('#cross').fadeIn();
 		$('.secondary').css('pointer-events', 'initial');
 	}
+	$('.form')[0].setAttribute("data", mode);
 	// $('.form').css('top', '0')
 	setGame(1);
 	$('.form').removeClass("hidden");
@@ -112,7 +113,7 @@ function hideCanvas(){
 }
 
 function updateFocus(){
-	console.log("updare")
+	// console.log("updare")
 	$('.form .clicked').each(function(i, el){
 		
 		if(el.querySelector("input") && el.querySelector("input").value == ""){
@@ -124,9 +125,11 @@ function updateFocus(){
 }
 
 function setGame(id){
+
 	var count = formData[id].no_of_participants;
 	var html = "";
 	var mode = $('.form')[0].getAttribute("data");
+	// console.log("set game ==> ", id, mode);
 	(new Array(count)).fill(0).map((_, i)=>{
 		html += createGroup(mode, i);
 	});
@@ -174,7 +177,7 @@ function setInputEventListener(){
 function submitForm(e){
 	e.preventDefault();
 	var data_ = getFormObj($(".form form"));
-	console.log(data_);
+	// console.log(data_);
 
 	var j = $('.form')[0].getAttribute("nop");
 	
@@ -192,12 +195,14 @@ function submitForm(e){
 		showMsg("Team name should be less than 30 charecters");
 		return;
 	}
-	console.log(data_);
-	for(var i of data_.phone_list){
-		console.log(isNaN(parseInt(i)))
-		if(isNaN(parseInt(i)) || i.length < 10){
-			showMsg("Please enter valid phone numbers");
-			return;
+	// console.log(data_);
+	if(bitsMode){
+		for(var i of data_.phone_list){
+			// console.log(isNaN(parseInt(i)))
+			if(isNaN(parseInt(i)) || i.length < 10){
+				showMsg("Please enter valid phone numbers");
+				return;
+			}
 		}
 	}
 	
@@ -205,13 +210,13 @@ function submitForm(e){
 	if(bitsMode)url+="register_team_bitsian/";
 	else url+="register_team_non_bitsian/";
 	var dataString = JSON.stringify(data_);
-	console.log(dataString);
+	// console.log(dataString);
 	$.ajax({
 		url,
 		method: "POST",
 		data: dataString,
 		success: function(data){
-			console.log(data)
+			// console.log(data)
 			showMsg(data.message);
 		}
 	})

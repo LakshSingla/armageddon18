@@ -42,6 +42,7 @@
 	margin: 20px auto;
 	width: fit-content;
 	text-align: left;
+	width: 300px;
 }
 .field *{
 	height: 30px;
@@ -73,7 +74,7 @@
 	color: #425171;
 }
 
-.field input, .field input:-webkit-autofill{
+.field input{
 	color: #011027;
 	border: 0;
 	outline:0;
@@ -81,8 +82,16 @@
 	border-bottom: 1px solid #ccc;
 }
 
+.field input:-webkit-autofill{
+	color: #011027;
+	border: 0;
+	outline:0;
+	background-color: transparent !important;
+	border-bottom: 1px solid #ccc;	
+}
+
 #submit{
-	margin-top: 20px;
+	margin-top: 80px;
 	
 	color: #eee;
 	background: #011027;
@@ -128,7 +137,7 @@ input:focus{
 	/*position: absolute;*/
 	width: 100%;
 	line-height: 30px;
-	top: 0;
+	top: -160px;
 	/*display: none;*/
 	padding: 10px;
 	
